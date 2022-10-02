@@ -14,7 +14,7 @@ import { FormContentComponent } from './form-content/form-content.component';
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: FormWrapperComponent },
     ])
   ],
   declarations: [

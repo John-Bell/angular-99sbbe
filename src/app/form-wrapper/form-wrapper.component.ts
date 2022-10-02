@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyModel } from '../my-model';
 
 @Component({
   selector: 'app-form-wrapper',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormWrapperComponent implements OnInit {
 
-  constructor() { }
+  myModel: MyModel;
+
+  constructor() { 
+    this.myModel = {
+      name: 'tss',
+      password: 'pass'
+    };
+  }
 
   ngOnInit(): void {
   }
