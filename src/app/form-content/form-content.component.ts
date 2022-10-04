@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MyModel } from '../my-model';
 
 @Component({
   selector: 'app-form-content',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-content.component.css']
 })
 export class FormContentComponent implements OnInit {
+
+
+  @Input()
+  bindModel!: MyModel;
 
   constructor() { }
 
