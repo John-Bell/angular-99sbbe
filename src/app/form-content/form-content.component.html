@@ -1,1 +1,5 @@
-<p>form-content works!</p>
+<form (ngSubmit)="formSubmit()" [formGroup]="frmGroup">
+    <input type="text" formControlName="name">
+    <input type="password" formControlName="password">
+    <button type="submit">save</button>
+</form>>
