@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { MyModel } from '../my-model';
+import { DataServiceService } from '../services/data-service.service';
 
 @Component({
   selector: 'app-form-wrapper',
@@ -9,8 +11,10 @@ import { MyModel } from '../my-model';
 export class FormWrapperComponent implements OnInit {
 
   myModel: MyModel;
+  myData$!: Observable<string>;
 
-  constructor() { 
+  constructor( dataService:DataServiceService) { 
+    this.myData$ = dataService.myObservable$;
     this.myModel = {
       name: 'tss',
       password: 'pass'
